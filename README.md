@@ -1,118 +1,151 @@
-# workshop-llm
-Workshop to create a RAG application using LLM models. 
+# 🧠 LLM Workshop with InterSystems IRIS
 
-This workshop is developed in Python 🐍 (Jupyter Notebook) and InterSystems IRIS.
+Welcome to the **Retrieval-Augmented Generation (RAG)** workshop! 🚀 This hands-on experience will teach you how to build intelligent AI applications that combine the power of Large Language Models with vector databases using InterSystems IRIS.
 
-The main purpose is to show you the main steps to create a RAG application using an LLM and a vector database.
+## 🎯 What You'll Learn
 
-You can find more in-depth information in https://learning.intersystems.com.
+In this workshop, you'll become a **RAG wizard** by building three different types of AI applications:
 
-# What do you need to install? 
-* [Git](https://git-scm.com/downloads) 
-* [Docker](https://www.docker.com/products/docker-desktop) (if you are using Windows, make sure you set your Docker installation to use "Linux containers").
-* [Docker Compose](https://docs.docker.com/compose/install/)
-* [Visual Studio Code](https://code.visualstudio.com/download) + [InterSystems ObjectScript VSCode Extension](https://marketplace.visualstudio.com/items?itemName=daimor.vscode-objectscript)
+1. **📄 PDF Question-Answering Systems** - Make documents talk! Transform static PDFs into interactive knowledge bases
+2. **🔍 Natural Language to SQL** - Speak to databases in plain English (or Spanish!) and get intelligent responses
+3. **🤖 Complete AI Agent Architecture** - Understand how to build production-ready AI agents
 
-# Setup
-Build the image we will use during the workshop:
+This workshop is developed in Python 🐍 (Jupyter Notebook) and **InterSystems IRIS** - because why settle for ordinary databases when you can have one that speaks vector? 😉
 
-Clone the repository:
+## 🛠️ Prerequisites 
+
+Make sure you have these tools ready for battle:
+
+* [Git](https://git-scm.com/downloads) 📦
+* [Docker](https://www.docker.com/products/docker-desktop) 🐳 (Windows users: enable "Linux containers")
+* [Docker Compose](https://docs.docker.com/compose/install/) 🎼
+* [Visual Studio Code](https://code.visualstudio.com/download) + [InterSystems ObjectScript Extension](https://marketplace.visualstudio.com/items?itemName=daimor.vscode-objectscript) 🔧
+
+## 🚀 Setup & Launch
+
+Time to bring this beast to life! 💪
+
+**1. Clone the repository:**
 ```bash
 git clone https://github.com/intersystems-ib/workshop-llm
 cd workshop-llm
 ```
 
-Build the image:
+**2. Build the image:**
 ```bash
 docker compose build
 ```
 
-Run the containers:
+**3. Launch the containers:**
 ```bash
 docker compose up -d
 ```
 
-After running the containers, you should be able to access to:
-* InterSystems IRIS [Management Portal](http://localhost:52774/csp/sys/UtilHome.csp). You can login using `superuser` / `SYS`
-* [Jupyter Notebook](http://localhost:8888) 
+**4. Access your AI playground:**
+* 🎛️ **InterSystems IRIS Management Portal**: [http://localhost:52774/csp/sys/UtilHome.csp](http://localhost:52774/csp/sys/UtilHome.csp)
+  - Login: `superuser` / `SYS`
+* 📓 **Jupyter Notebook**: [http://localhost:8888](http://localhost:8888)
 
-# Explore RAG applications using Jupyter
+## 🧪 Workshop Exercises
 
-## Medicine Leaflet examples
+### 💊 Medicine Leaflet Q&A (PDF RAG Systems)
 
-You have some medicine leaflets (in spanish) in [./data](./data).
+Transform boring medical documents into an intelligent assistant! Using Spanish medicine leaflets in [./data](./data), you'll build systems that can answer questions like a knowledgeable pharmacist. 💊
 
-This example is about creating a RAG Q&A application that can answer questions about those medicine leaflets.
+**Choose your adventure:**
 
-Open [Jupyter Notebook](http://localhost:8888), there you can find:
-* [QA-PDF-LLM.ipynb](./jupyter/QA-PDF-LLM.ipynb) - RAG example using [MistralAI](https://mistral.ai) LLM 
-* [QA-PDF-Local.ipynb](./jupyter/QA-PDF-Local.ipynb) - RAG example using a local LLM
+* **📄 [PDF-RAG-CloudLLM.ipynb](./jupyter/PDF-RAG-CloudLLM.ipynb)** - Cloud-powered RAG using [Mistral AI](https://mistral.ai) 
+  - *Perfect for: Production systems, highest accuracy, API-based*
+  
+* **🏠 [PDF-RAG-LocalModels.ipynb](./jupyter/PDF-RAG-LocalModels.ipynb)** - Privacy-first with local models
+  - *Perfect for: Complete privacy, offline operation, no API costs*
 
-![alt text](/images/jupyter.png)
+![Jupyter Interface](/images/jupyter.png)
 
-You can test the project step by step or execute it at one time, feel free.
+### 🍩 Holefoods Text-to-SQL Adventure
 
-## Hoolefoods data model text to SQL
+Meet **Holefoods** - a quirky company that sells food with holes in it! 🍩 (Creative, right?)
 
-This example is about a company called Holefoods that sells food with some hole on it :)
+Build an intelligent SQL assistant that translates natural language into database queries. Ask questions like *"How many donuts did we sell in Europe last month?"* and watch the magic happen! ✨
 
-Using the sales data model of the company, the goal is to create an assistant that can translate natural language questions into valid SQL that answer the question.
+* **🗣️ [NaturalLanguage-to-SQL.ipynb](./jupyter/NaturalLanguage-to-SQL.ipynb)** - Your multilingual database whisperer
+  - *Features: Semantic similarity, few-shot learning, IRIS SQL optimization*
 
-In [Jupyter Notebook](http://localhost:8888), you will find:
-* [QA-SQL-LLM.ipynb](./jupyter/QA-SQL-LLM.ipynb) - text to SQL example using OpenAI LLM.
+## 🌟 Inspiration: Full AI Agent Demo
 
-# Create other applications
+Want to see the full power of AI agents in action? Check out this **complete customer support agent** built with **smolagents** and **InterSystems IRIS**:
 
-There are some other examples you can try to build and modify in your local environment.
+🔗 **[Customer Support AI Agent Demo](https://github.com/intersystems-ib/customer-support-agent-demo)**
 
-First of all, go to the folder ./python and create a new environment and install some requirements:
+📖 **[Developer Community Article](https://community.intersystems.com/post/build-customer-support-ai-agent-smolagents-intersystems-iris-sql-rag-interoperability)** - Deep dive explanation
 
+This demo showcases:
+- 🤖 **Autonomous AI agents** that can reason and take actions
+- 📊 **SQL + RAG integration** for comprehensive data access
+- 🔄 **InterSystems IRIS interoperability** for enterprise-grade systems
+- 🎯 **Production-ready architecture** you can actually deploy
+
+## 🛠️ Advanced: Local Development Environment
+
+Ready to build your own AI applications? Set up a local Python environment:
+
+**For Mac/Linux users:**
 ```bash
-# create a local venv environment
-# ... for Mac or Linux users
+cd python
 python3 -m venv .venv
-# ... for Windows users
-python -m venv .venv
-
-# activate venv
-# ... for Mac or Linux users
 source .venv/bin/activate
-# ... for Windows users
-./venv/Scripts/Activate.ps1
-
-# install dependencies
 pip3 install -r requirements.txt
 ```
 
-Create an `.env` file for storing API keys for OpenAI / MistralAI. They will be used in the applications.
-
+**For Windows users:**
+```bash
+cd python
+python -m venv .venv
+./venv/Scripts/Activate.ps1
+pip3 install -r requirements.txt
 ```
-OPENAI_API_KEY="your-api"
-MISTRAL_API_KEY="your-api"
+
+**Create your API keys file:**
+```bash
+# Create .env file
+echo 'OPENAI_API_KEY="your-openai-key"' > .env
+echo 'MISTRAL_API_KEY="your-mistral-key"' >> .env
 ```
 
-## Text to SQL service API 
-You can find a sample Text to SQL based on [QA-SQL-LLM.ipynb](./jupyter/QA-SQL-LLM.ipynb) [here](python/holefoods_text2sql/main.py).
-
-You can run it like this:
+### 🌐 Text-to-SQL API Service
+Want to productionize your SQL skills? Try our FastAPI service based on the notebook:
 
 ```bash
 cd python/holefoods_text2sql
 fastapi dev main.py
 ```
+🌍 **Explore the API**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-Then open http://127.0.0.1:8000/docs to explore the API and try it out using the web client.
-
-## Streamlit Assistant
-There is also a great example of a langchain / streamlit chatbot assitant in https://alejandro-ao.com/how-to-use-streaming-in-langchain-and-streamlit/
-
-You can play with it here as well:
+### 💬 Streamlit Chatbot Assistant
+Experience a beautiful chat interface:
 
 ```bash
-cd python/assitant
+cd python/assistant
 streamlit run chatbot.py
 ```
+🎨 **Chat away**: [http://localhost:8501](http://localhost:8501)
 
-Then open http://localhost:8501 and have a look at it.
+**Challenge:** Can you integrate the medicine leaflet logic into this assistant? 🤔
 
-Are you able to add the logic to reproduce the Medicine Leaflet example in the assitant ?
+## 🎓 Learning Resources
+
+Want to dive deeper into the InterSystems universe?
+- 📚 **[InterSystems Learning](https://learning.intersystems.com)** - Your gateway to mastery
+- 🏛️ **[InterSystems IRIS Documentation](https://docs.intersystems.com/iris/)** - The sacred texts
+- 👥 **[Developer Community](https://community.intersystems.com/)** - Where the magic happens
+
+## 🎉 Ready to Build the Future?
+
+You're now equipped with the knowledge to build:
+- 🔮 **Intelligent document systems** that understand context
+- 🗣️ **Natural language database interfaces** that feel like magic
+- 🤖 **Complete AI agents** that can reason and act autonomously
+
+**Go forth and create amazing AI applications!** The only limit is your imagination! 🚀✨
+
+---
