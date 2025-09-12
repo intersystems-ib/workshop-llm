@@ -1,3 +1,4 @@
+sqlalchemy-iris==0.17.0
 langchain-community
 langchain-openai
 langchain_iris
