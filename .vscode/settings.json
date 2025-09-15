@@ -9,5 +9,8 @@
         "docker-compose": {
             "service": "iris"
         }
-    }
+    },
+    "files.associations": {
+        "iris.script": "objectscript"
+    },
 }

@@ -1,3 +1,4 @@
+sqlalchemy-iris==0.17.0
 pypdf
 sentence-transformers
 ipywidgets
