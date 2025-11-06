@@ -101,7 +101,7 @@ pip3 install -r requirements.txt
 ```bash
 cd python
 python -m venv .venv
-./venv/Scripts/Activate.ps1
+./.venv/Scripts/Activate.ps1
 pip3 install -r requirements.txt
 ```
 
